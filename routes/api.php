@@ -20,3 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('alumnos', [AlumnoController::class, 'index']);
+Route::get('/alumnos/{id}', [AlumnoController::class, 'show']);
+Route::post('alumnos', [AlumnoController::class, 'store']);
+Route::put('/alumnos/{id}', [AlumnoController::class, 'update']);
+Route::delete('/alumnos/{id}', [AlumnoController::class, 'destroy']);
