@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AlumnoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\ProfesorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,9 @@ Route::get('/alumnos/{id}', [AlumnoController::class, 'show']);
 Route::post('alumnos', [AlumnoController::class, 'store']);
 Route::put('/alumnos/{id}', [AlumnoController::class, 'update']);
 Route::delete('/alumnos/{id}', [AlumnoController::class, 'destroy']);
+
+Route::get('/profesores', [ProfesorController::class, 'index']);
+Route::get('/profesores/{id}', [ProfesorController::class, 'show']);
+Route::post('/profesores', [ProfesorController::class, 'store']);
+Route::put('/profesores/{id}', [ProfesorController::class, 'update']);
+Route::delete('/profesores/{id}', [ProfesorController::class, 'destroy']);
